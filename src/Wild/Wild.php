@@ -39,10 +39,6 @@ function rmdir(string $dir){
 	}
 	foreach(scandir($dir) as $file){
 		if($file !== "." and $file !== ".."){
-			if(substr($dir, -1) !== "/"){
-				$dir .= "/";
-			}
-
 			$realPath = $dir . $file;
 
 			if(file_exists($realPath)){
